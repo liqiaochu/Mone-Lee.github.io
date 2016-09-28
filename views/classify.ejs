@@ -1,0 +1,17 @@
+<%- include contentHeader %>
+	</div>
+  	<div class="content">
+	  	<div class="newContent">
+	  		<ul>
+			  	<% posts.forEach(function(post,index){ %>
+			  		<li class="articleList">
+			  			<a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">
+				  			<%= post.title %>
+				  		</a>
+				  		<span><%= post.time.day %></span>
+			  		</li>
+			  	<% }) %>
+		  	</ul>
+	  	</div>
+  	</div>
+<%- include footer %>
