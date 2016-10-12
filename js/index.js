@@ -1,22 +1,22 @@
 window.onload=function(){
-	//html
-	var canvasH=document.getElementById("canvasH");
-	plotScore(canvasH,85,"#BD0000");
-	//html5
-	var canvasH5=document.getElementById("canvasH5");
-	plotScore(canvasH5,45,"#ff7900");
-	//css
-	var canvasC=document.getElementById("canvasC");
-	plotScore(canvasC,80,"#d5ec15");
-	//css3
-	var canvasC3=document.getElementById("canvasC3");
-	plotScore(canvasC3,68,"#41980E");
-	//javascript
-	var canvasJS=document.getElementById("canvasJS");
-	plotScore(canvasJS,40,"#773a8c");
-	//jquery
-	var canvasJQ=document.getElementById("canvasJQ");
-	plotScore(canvasJQ,58,"#1AAFD0");
+	// //html
+	// var canvasH=document.getElementById("canvasH");
+	// plotScore(canvasH,85,"#BD0000");
+	// //html5
+	// var canvasH5=document.getElementById("canvasH5");
+	// plotScore(canvasH5,45,"#ff7900");
+	// //css
+	// var canvasC=document.getElementById("canvasC");
+	// plotScore(canvasC,80,"#d5ec15");
+	// //css3
+	// var canvasC3=document.getElementById("canvasC3");
+	// plotScore(canvasC3,68,"#41980E");
+	// //javascript
+	// var canvasJS=document.getElementById("canvasJS");
+	// plotScore(canvasJS,40,"#773a8c");
+	// //jquery
+	// var canvasJQ=document.getElementById("canvasJQ");
+	// plotScore(canvasJQ,58,"#1AAFD0");
 
 	/**
 	 * 回到顶部
@@ -35,25 +35,31 @@ window.onload=function(){
 		},30);
 	};
 
-	/**
-	 * 弹出联系方式
-	 */
-	var contactMe=document.getElementById("contactMe");
-	var overlay=document.getElementById("overlay");
-	var contactContent=document.getElementById("contactContent");
-	contactMe.onclick=function(){		
-		overlay.className="";		
-		contactContent.style.opacity=1;
-	}
+	var cfg={
+		type:'base',
+		width:365,
+		height:200,
+		css:{
+			backgroundColor:'#ccc',
+			opacity:0,
+		},
+		text:'text',
+		animateIn:{
+			opacity:1
+		},
+		animateOut:{
+			opacity:0
+		},
+	};
 
-	/**
-	 * 关闭弹出联系方式
-	 */
-	var closeButton=document.getElementById("closeButton");
-	closeButton.onclick=function(){
-		overlay.className="hide";
-		contactContent.style.opacity=0;
-	}
+	var component=new componentBase('TEST',cfg);
+	$('.ability').append(component);
+
+	var leave=true;
+	$('body').click(function(){
+		leave=!leave;
+		$('.component').trigger(leave?'onLeave':'onLoad');
+	})
 
 
 
@@ -82,4 +88,25 @@ function plotScore(canvas,score,color){
 	context.textBaseline='top';
 
 	context.fillText(score+"%",315,10);
+}
+
+function boomIn(){
+	/**
+	 * 弹出联系方式
+	 */
+	var contactMe=document.getElementById("contactMe");
+	var overlay=document.getElementById("overlay");
+	var contactContent=document.getElementById("contactContent");
+	overlay.className="";		
+	contactContent.className="";	
+}
+function boomOut(){
+	/**
+	 * 关闭弹出联系方式
+	 */
+	var contactMe=document.getElementById("contactMe");
+	var overlay=document.getElementById("overlay");
+	var closeButton=document.getElementById("closeButton");
+	overlay.className="hide";
+	contactContent.className="hide";
 }
