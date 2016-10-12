@@ -65,30 +65,30 @@ window.onload=function(){
 
 }
 
-function plotScore(canvas,score,color){
-	var context = canvas.getContext("2d");
-	var print=(score/100)*350;
+// function plotScore(canvas,score,color){
+// 	var context = canvas.getContext("2d");
+// 	var print=(score/100)*350;
 
-	//绘制刻度线
-	context.lineWidth=34;
-	context.strokeStyle=color;
-	context.moveTo(0,17);
-	context.lineTo(print,17);
-	context.stroke();
+// 	//绘制刻度线
+// 	context.lineWidth=34;
+// 	context.strokeStyle=color;
+// 	context.moveTo(0,17);
+// 	context.lineTo(print,17);
+// 	context.stroke();
 
-	context.beginPath();
-	context.strokeStyle="#eeeeee";
-	context.moveTo(print,17);
-	context.lineTo(350,17);
-	context.stroke();
+// 	context.beginPath();
+// 	context.strokeStyle="#eeeeee";
+// 	context.moveTo(print,17);
+// 	context.lineTo(350,17);
+// 	context.stroke();
 
-	//把数值写在刻度位置
-	context.fillStyle="#000";
-	context.font="italic 14px Arial";
-	context.textBaseline='top';
+// 	//把数值写在刻度位置
+// 	context.fillStyle="#000";
+// 	context.font="italic 14px Arial";
+// 	context.textBaseline='top';
 
-	context.fillText(score+"%",315,10);
-}
+// 	context.fillText(score+"%",315,10);
+// }
 
 function boomIn(){
 	/**
