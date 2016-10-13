@@ -1,23 +1,4 @@
 window.onload=function(){
-	// //html
-	// var canvasH=document.getElementById("canvasH");
-	// plotScore(canvasH,85,"#BD0000");
-	// //html5
-	// var canvasH5=document.getElementById("canvasH5");
-	// plotScore(canvasH5,45,"#ff7900");
-	// //css
-	// var canvasC=document.getElementById("canvasC");
-	// plotScore(canvasC,80,"#d5ec15");
-	// //css3
-	// var canvasC3=document.getElementById("canvasC3");
-	// plotScore(canvasC3,68,"#41980E");
-	// //javascript
-	// var canvasJS=document.getElementById("canvasJS");
-	// plotScore(canvasJS,40,"#773a8c");
-	// //jquery
-	// var canvasJQ=document.getElementById("canvasJQ");
-	// plotScore(canvasJQ,58,"#1AAFD0");
-
 	/**
 	 * 回到顶部
 	 */
@@ -36,14 +17,17 @@ window.onload=function(){
 	};
 
 	var cfg={
-		type:'base',
-		width:365,
-		height:200,
+		type:'bar',
 		css:{
-			backgroundColor:'#ccc',
 			opacity:0,
 		},
-		text:'text',
+		data:[
+			['HTML/CSS','#7D0E0E',.72,'#BD0000'],
+			['JavaScript','#B16119',.4,'#ff7900'],
+			['CSS3','#9fb10d',.65,'#d5ec15'],
+			['HTML5','#3F751F',.45,'#41980E'],
+			['jQuery','#580F71',.58,'#773a8c'],
+		],
 		animateIn:{
 			opacity:1
 		},
@@ -52,43 +36,14 @@ window.onload=function(){
 		},
 	};
 
-	var component=new componentBase('TEST',cfg);
+	var component=new componentBar('Bar',cfg);
 	$('.ability').append(component);
 
-	var leave=true;
-	$('body').click(function(){
-		leave=!leave;
-		$('.component').trigger(leave?'onLeave':'onLoad');
-	})
-
-
+	setTimeout(function(){
+		$('.component').trigger('onLoad');
+	},500);
 
 }
-
-// function plotScore(canvas,score,color){
-// 	var context = canvas.getContext("2d");
-// 	var print=(score/100)*350;
-
-// 	//绘制刻度线
-// 	context.lineWidth=34;
-// 	context.strokeStyle=color;
-// 	context.moveTo(0,17);
-// 	context.lineTo(print,17);
-// 	context.stroke();
-
-// 	context.beginPath();
-// 	context.strokeStyle="#eeeeee";
-// 	context.moveTo(print,17);
-// 	context.lineTo(350,17);
-// 	context.stroke();
-
-// 	//把数值写在刻度位置
-// 	context.fillStyle="#000";
-// 	context.font="italic 14px Arial";
-// 	context.textBaseline='top';
-
-// 	context.fillText(score+"%",315,10);
-// }
 
 function boomIn(){
 	/**

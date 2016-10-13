@@ -2,8 +2,6 @@
 #header{
 	width:100%;
 	height:190px;
-	/*background: url(images/head.png) repeat-x;*/
-	/*background-color: #49b75b;*/
 	background-color: #d41717;
 }
 #header .headNav{
@@ -13,6 +11,7 @@
 	top:0;
 	left: 0;
 	background-color: #BD0000;
+	z-index: 99;
 }
 #header .headNav ul{
 	float: right;
@@ -119,7 +118,6 @@
 	margin:0 auto;
 }
 #content .contContainer .contentLeft{
-	/*width:28%;*/
 	width:50%;
 	float: left;
 }
@@ -136,39 +134,61 @@
 	content: "";
 	margin:0 10px;
 }
-#content .contContainer .contentLeft .complete{
-	height:35px;
-	margin:10px auto;
-}
 #content .contContainer .contentLeft h2{
 	float: left;
-	display: inline-block;
 	height: 34px;
 	line-height: 34px;
-	width:100px;
+	width:21.5%;
 	background-color: #7D0E0E;
 	text-align: center;
 	color:#fff;
 	text-transform: uppercase;
+	font-size: 12px;
 }
-#content .contContainer .contentLeft #headingH5{
-	background-color: #B16119;
-}
-#content .contContainer .contentLeft #headingC{
-	background-color: #9fb10d;
-}
-#content .contContainer .contentLeft #headingC3{
-	background-color: #3F751F;
-}
-#content .contContainer .contentLeft #headingJS{
-	background-color: #580F71;
-}
-#content .contContainer .contentLeft #headingJQ{
-	background-color: #189AB7;
-}
-#content .contContainer .contentLeft canvas{
-	display: inline-block;
+#content .contContainer .contentLeft .wrap{
 	float: left;
+	width:78.5%;
+}
+#content .contContainer .contentLeft .ability{
+	width:90%;
+}
+#content .contContainer .contentLeft .ability .component_bar{
+	margin-top:20px;
+}
+#content .contContainer .contentLeft .ability .line{
+	position: relative;
+	height:34px;
+	background-color: #eee;
+	z-index: 10;
+}
+#content .contContainer .contentLeft .rate{
+	float: left;
+	height:34px;
+	position: relative;
+}
+#content .contContainer .contentLeft .rate .bar{
+	height:100%;
+	position: absolute;
+	left: 0;
+	top:0;
+	width:0;
+}
+#content .contContainer .contentLeft .ability .line .per{
+	color: ;
+	font: italic 14px Arial;
+	position: absolute;
+	right:5px;
+	top:10px;
+	opacity:0;
+
+}
+#content .contContainer .contentLeft .ability .component_bar_load .line .rate .bar{
+	-webkit-transition:all 1s .5s;
+	width:100%;
+}
+#content .contContainer .contentLeft .ability .component_bar_load .line .per{
+	-webkit-transition:all 1s 1.5s;
+	opacity:1;
 }
 #content .contContainer .contentLeft .experience{
 	margin-top: 30px;

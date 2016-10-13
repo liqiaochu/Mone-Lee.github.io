@@ -15,7 +15,7 @@ var componentBase=function(name,cfg){
 
 	if(cfg.center===true){
 		component.css({
-			marginLeft:(cfg.width/4*-1)+'px',
+			marginLeft:(cfg.width/2*-1)+'px',
 			left:'50%'
 		})
 	}
