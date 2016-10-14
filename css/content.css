@@ -9,8 +9,11 @@
 	text-decoration: none;
 }
 #content{
-	width:78%;
+	width:70%;
 	margin:20px auto;
+}
+h1,h2{
+	text-align: center;
 }
 #content pre{
 	word-wrap: normal;
