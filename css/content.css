@@ -12,7 +12,7 @@
 	width:70%;
 	margin:20px auto;
 }
-h1,h2{
+#content h1,#content h2{
 	text-align: center;
 }
 #content pre{
