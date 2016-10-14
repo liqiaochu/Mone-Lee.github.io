@@ -3,12 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>测试文章内容</title>
-	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../css/reset.css"> -->
 	<link rel="stylesheet" type="text/css" href="../css/header.css">
 	<link rel="stylesheet" type="text/css" href="../css/content.css">
 	<script type="text/javascript" src="../js/page.js"></script>
 	<script type="text/javascript" src="../js/lib/jquery.js"></script>
-	<script type="text/javascript" src="../js/lib/showdown.min.js"></script>
+	<script type="text/javascript" src="../js/lib/marked.min.js"></script>
 </head>
 <body>
 	<div id="header">
@@ -39,11 +39,8 @@
 	</div>
 
 	<script type="text/javascript">
-		$(function(){
-			var converter=new showdown.Converter();
-			var text='#hello,markdown! `ctrl + /`',
-			html=converter.makeHtml(text);
-			$('#content').html(html);
+		$.get("pages/testPage.md",function(response,status,xhr){
+			$("#content").html(marked(response));
 		})
 	</script>
 </body>
