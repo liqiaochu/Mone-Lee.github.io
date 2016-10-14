@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/header.css">
 	<link rel="stylesheet" type="text/css" href="../css/content.css">
 	<script type="text/javascript" src="../js/page.js"></script>
+	<script type="text/javascript" src="../js/lib/jquery.js"></script>
 </head>
 <body>
 	<div id="header">
@@ -33,7 +34,7 @@
             </div>
         </div>
 	</div>
-	<div id="content">
+	<!-- <div id="content">
 		<h2 class="title">文章标题</h2>
 		<p>作者：<span id="writter">李梦仪</span></p>
 		<p>时间：<span id="time">2016-10-13 17:31</span></p>
@@ -47,6 +48,14 @@
 
 			<p>文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容</p>
 		</div>
+	</div> -->
+	<div id="content">
 	</div>
+
+	<script type="text/javascript">
+		$.get("pages/testPage.md",function(response,status,xhr){
+			$("#content").html(marked(response));
+		})
+	</script>
 </body>
 </html>
