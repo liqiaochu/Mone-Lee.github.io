@@ -1,27 +1,11 @@
+#header ul{
+	margin:0;
+	padding:0;
+}
+#header li{
+	list-style: none;
+}
 #content{
 	width:78%;
 	margin:20px auto;
-	/*font-size: 14px;
-	letter-spacing: 1.2px;*/
 }
-/*#content .title{
-	color:#000;
-	font-size: 22px;
-	text-align: center;
-	margin-bottom: 5px;
-}
-#content > p{
-	text-align: center;
-	font-size: 15px;
-	color: #acacac;
-}
-#content>p span{
-	color:#4c4c4c;
-}
-#content .page{
-	margin-top: 5px;
-	font-size: 16px;
-}
-#content .page p{
-	text-indent: 2em;
-}*/
