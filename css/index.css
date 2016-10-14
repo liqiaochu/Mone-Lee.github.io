@@ -110,12 +110,13 @@
 }
 #content .contContainer .contentRight{
 	float: left;
+    margin-left: 40px;
 }
 #content .contContainer .contentRight ul{
 	margin-top: 20px;
 }
 #content .contContainer .contentRight ul li.classify{
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: bold;
 	list-style: none;
 }
@@ -123,17 +124,20 @@
 	list-style: disc;
 }
 #content .contContainer .contentRight ul li a:link{
-	font-size: 14px;
+	font-size: 18px;
 	color:#794d4d;
+	/*color:#1e29bd;*/
 }
 #content .contContainer .contentRight ul li a:visited{
 	color:#1e29bd;
+	/*color:#bcbcbc;*/
 }
 #content .contContainer .contentRight ul li a:hover{
 	text-decoration: underline;
 }
 #content .contContainer .contentRight ul li a:active{
 	color:#1e29bd;
+	/*color:#ccc;*/
 }
 #content .contContainer #button{
 	width: 40px;
