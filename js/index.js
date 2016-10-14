@@ -41,6 +41,6 @@ window.onload=function(){
 
 	setTimeout(function(){
 		$('.component').trigger('onLoad');
-	},500);
+	},200);
 
 }
