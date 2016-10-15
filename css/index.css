@@ -111,6 +111,7 @@
 #content .contContainer .contentRight{
 	float: left;
     margin-left: 40px;
+    width: 40%;
 }
 #content .contContainer .contentRight ul{
 	margin-top: 20px;
