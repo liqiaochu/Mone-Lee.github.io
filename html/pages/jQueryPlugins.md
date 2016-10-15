@@ -22,6 +22,7 @@
 
 **2、jQuery插件的开发方式**
 2.1、类级别组件开发
+
 即给jQuery命名空间下添加新的全局函数，也称为静态方法。
 ``` javascript
 	jQuery.myPlugin = function(){
@@ -31,6 +32,7 @@
 例：$.Ajax()、$.extend()
 
 2.2、对象级别组件开发
+
 即**挂在jQuery原型下**的方法，这样通过选择器获取的jQuery对象实例也能共享该方法，也称为动态方法。
 ``` javascript
 	$.fn.myPlugin = function(){		//这里$.fn === $.prototype
@@ -40,6 +42,7 @@
 例：addClass()，attr()等，都需要创建实例来调用
 
 **3、链式调用**
+
 使用例子：`$('div').next().addClass(...)...`
 与上面介绍对象级别组件开发`$.fn.myPlugin = function(){...}`组合的实现：
 ``` javascript
@@ -52,6 +55,7 @@
 其中，`return this`返回当前对象，来维护插件的链式调用；而`each`循环实现每个元素的访问。
 
 **4、单例模式**
+
 使用单例模式是为了只生成一个实例，可以避免过多的实例不好管理，比如一个人售票还好，再多一个人售票就会产生进程之间的一系列问题。
 ``` javascript
 1	$.fn.myPlugin = function(){
@@ -68,6 +72,7 @@
 其中，data()方法向被选元素附加数据(第8行)，或者从被选元素获取数据(第3行)。
 
 **5、开发jQuery插件**
+
 基本结构为：
 ```javascript
 (function($){
@@ -114,3 +119,5 @@
 
 一个[全屏切换插件](https://github.com/Mone-Lee/pageSwitch)的例子。
 
+
+以上为个人见解，望指教。
