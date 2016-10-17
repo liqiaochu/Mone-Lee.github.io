@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>执行环境和作用域</title>
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/content.css">
+	<script type="text/javascript" src="../js/page.js"></script>
+	<script type="text/javascript" src="../js/lib/jquery.js"></script>
+	<script type="text/javascript" src="../js/lib/marked.min.js"></script>
+</head>
+<body>
+	<div id="header">
+		<div class="headNav">
+            <ul>
+            	<li><a href="../../index.html">回到首页</a></li>
+                <li><a href="javascript:;" id="contactMe" onclick="boomIn()" >联系我</a></li>
+            </ul>
+            <div id="overlay" class="hide"></div>
+            <div id="contactContent"  class="hide">
+                <p><span>姓名：</span>李梦仪</p>
+                <p><span>性别：</span>女</p>
+                <p><span>手机：</span>13424049855</p>
+                <p><span>邮箱：</span>mone_lee@163.com</p>
+                <p><span>自我介绍：</span>华南农业大学软件工程专业本科生在读。。。。。。。。</p>
+                <input type="button" value="关闭" id="closeButton" onclick="boomOut()" />
+            </div>
+        </div>
+	</div>
+	<div id="content">
+	</div>
+
+	<script type="text/javascript">
+        $.get("pages/ee&&scope.md",function(response,status,xhr){
+            $("#content").html(marked(response));
+        })  
+    </script>
+</body>
+</html>
