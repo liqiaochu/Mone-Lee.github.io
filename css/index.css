@@ -123,6 +123,7 @@
 }
 #content .contContainer .contentRight ul li{
 	list-style: disc;
+	margin: 5px;
 }
 #content .contContainer .contentRight ul li a:link{
 	font-size: 18px;
