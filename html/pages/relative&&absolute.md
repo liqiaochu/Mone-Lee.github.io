@@ -16,6 +16,7 @@
 看例子：
 
 html结构
+
 ```html
 	<div class="wrapper">
         <div class="box"></div>
@@ -29,6 +30,7 @@ html结构
         <div class="box"></div>
     </div>
 ```
+
 初始css代码
 
 ```css
@@ -48,6 +50,7 @@ html结构
 ```
 
 初始效果：
+
 ![](../../images/before.png)
 
 定位css代码
@@ -66,6 +69,7 @@ html结构
 ```
 
 初始效果：
+
 ![](../../images/after.png)
 
 

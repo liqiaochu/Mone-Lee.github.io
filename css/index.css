@@ -127,19 +127,16 @@
 }
 #content .contContainer .contentRight ul li a:link{
 	font-size: 18px;
-	color:#794d4d;
-	/*color:#1e29bd;*/
-}
-#content .contContainer .contentRight ul li a:visited{
 	color:#1e29bd;
-	/*color:#bcbcbc;*/
+}
+#content .contContainer .contentRight ul li a:visited{	
+	color:#794d4d;
 }
 #content .contContainer .contentRight ul li a:hover{
 	text-decoration: underline;
 }
 #content .contContainer .contentRight ul li a:active{
-	color:#1e29bd;
-	/*color:#ccc;*/
+	color:#794d4d;
 }
 #content .contContainer #button{
 	width: 40px;
