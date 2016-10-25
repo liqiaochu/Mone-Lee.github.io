@@ -30,3 +30,40 @@
 
 **3、后台网页实现技术要点**
 
+**3.1 读取文件，实现图片预览**
+
+在商品信息编辑页面中，实现了商家选取本地图片文件上传并在特定位置实现预览的功能。
+![上传图片、预览](../../images/preview.png)
+在这里的实现主要使用了**File API**。
+>File API只是规定怎么从硬盘上提取文件，直接交给在网页中运行的JavaScript代码。然后代码可以打开文件探究数据，无论是文本文件还是其他文件。
+
+>注意：File API不能修改文件，也不能创建新文件。
+
+**File API实现文件读取的基本步骤是：**
+
+获取input元素提供的文件合集中取得第一个文件；
+创建FileReader的对象并调用FileReader的方法（`readAsDataURL()、readAsText()、readAsBinaryString()、readAsArrayBuffer()`）提取文件内容；
+把内容（保存在onload事件的e.target.result）显示在特定区域中。（因为对象的方法是异步的，所以可以先实现数据的显示，再实现数据的提取和转换）
+
+
+实现步骤：
+
+1、取得文件
+`<input type="file" name="goodsImg" accept="image" onchange="processFile(this.files)">`
+
+2、processFiles函数的实现
+```javascript
+function processFile(files){
+    var file = files[0];    //从input元素提供的文件合集中取得第一个文件
+    var reader = new FileReader();  //创建FileReader对象，以便后面调用FileReader的方法提取文件内容
+    reader.onload=function(e){  //这个事件发生时，意味着数据准备好了
+        ...
+        img.src = e.target.result;
+        ...
+    };
+    reader.readAsDataURL(file); //这个方法会转换文件内容，并保存在e.target.result中
+}
+```
+
+
+
