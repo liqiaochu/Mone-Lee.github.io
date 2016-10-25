@@ -1,0 +1,10 @@
+#content ul{
+    width:100%;
+}
+#content ul li{
+    width:45%;
+    display: inline-block;
+}
+#content ul li img{
+    width:100%;
+}
