@@ -4,6 +4,8 @@
 #content ul li{
     width:45%;
     display: inline-block;
+    margin-top: 3px;
+    margin-left: 5px;
 }
 #content ul li img{
     width:100%;
